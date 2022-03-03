@@ -1,0 +1,36 @@
+{
+	
+	"apiVersion": 2,
+	"name": "create-block/dynamic-list",
+	"version": "0.1.0",
+	"title": "Dynamic List",
+	"category": "widgets",
+	"icon": "admin-post",
+	"description": "envo dynamic list by Rahaf.",
+	"keywords": ["d","posts"],
+	"supports": {
+		"html": false
+	},
+	"textdomain": 	"dynamic-list",
+	"editorScript": "file:./index.js",
+	"editorStyle":  "file:./index.css",
+	"style": 		"file:./style-index.css",
+	"attributes": {
+		"numberOfPosts": {
+			"type": "number",
+			"default": 5
+		},
+		"displayFeaturedImage": {
+			"type": "boolean",
+			"default": true
+		},
+		"order":{
+			"type" :"string",
+			"defult": "desc"
+		},
+		"orderBy":{
+			"type":"string",
+			"defult":"date"
+		}
+	}
+}
