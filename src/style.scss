@@ -1,12 +1,32 @@
+$gtc:(
+1, 2, 3, 4, 5, 6, 7, 8, 9
+);
+
+
 .wp-block-create-block-dynamic-list {
-		list-style: none;
+        list-style: none;
 		padding: 0;
 		margin: 0;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 30px;
-	
-		li {
+		display: grid;		
+		gap: 30px;		
+           
+        @each $num in $gtc {		
+			&.has-#{$num}{
+				grid-template-columns: repeat($num, 1fr);
+				
+				@media only screen and (max-width : 900px) {
+					
+					grid-template-columns: repeat(2, 1fr);
+				}
+				@media only screen and (max-width : 300px) {			
+					grid-template-columns: repeat(1, 1fr);
+					
+				}
+				
+			}
+		}
+
+            li {
 	
 			img {
 				margin-bottom: 10px;
@@ -35,5 +55,6 @@
 				margin: 15px 0 0;
 			}
 		}
-	
+
 }
+

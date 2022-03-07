@@ -31,6 +31,10 @@
 		"orderBy":{
 			"type":"string",
 			"defult":"date"
+		},
+		"gridTemplateColumns":{
+			"type": "number",
+			"default": 2
 		}
 	}
 }

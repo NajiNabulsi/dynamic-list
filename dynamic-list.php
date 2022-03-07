@@ -6,7 +6,7 @@
  * Requires at least: 5.8
  * Requires PHP:      7.0
  * Version:           1.0
- * Author:            Rahaf Sabagh
+ * Author:            Rahaf Alsabbagh
  * License:           GPL-2.0-or-later 
  * Text Domain:       dynamic-list
  *
@@ -16,7 +16,6 @@
 
 function posts_block($attributes)
 {
-	// var_dump($attributes);
 	$args = array(
 
 		'posts_per_page' => $attributes['numberOfPosts'],
@@ -26,8 +25,7 @@ function posts_block($attributes)
 	);
 
 	$recent_posts = get_posts($args);
-
-	$posts = '<ul ' . get_block_wrapper_attributes() . '>';
+	$posts = '<ul class = " wp-block-create-block-dynamic-list has-' . $attributes['gridTemplateColumns'] . '">';
 
 	foreach ($recent_posts  as $post) {
 		$title = get_the_title($post);
@@ -56,13 +54,8 @@ function posts_block($attributes)
 
 function create_block_dynamic_list_block_init()
 {
-	// register_block_type(__DIR__ . '/build');
 	register_block_type(__DIR__ . '/build', array(
 		'render_callback' => 'posts_block'
 	));
-
-	// register_block_type_from_metadata(__DIR__, array(
-	// 	'render_callback' => 'posts_block'
-	// ));
 }
 add_action('init', 'create_block_dynamic_list_block_init');

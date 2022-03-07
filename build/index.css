@@ -1,37 +1,174 @@
 /*!****************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/editor.scss ***!
   \****************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
-ul.wp-block-create-block-dynamic-list {
+.wp-block-create-block-dynamic-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-ul.wp-block-create-block-dynamic-list li img {
+.wp-block-create-block-dynamic-list.has-1 {
+  -ms-grid-columns: (1fr)[1];
+  grid-template-columns: repeat(1, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-1 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-1 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-2 {
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-2 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-2 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-3 {
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-3 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-3 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-4 {
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-4 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-4 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-5 {
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-5 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-5 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-6 {
+  -ms-grid-columns: (1fr)[6];
+  grid-template-columns: repeat(6, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-6 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-6 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-7 {
+  -ms-grid-columns: (1fr)[7];
+  grid-template-columns: repeat(7, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-7 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-7 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-8 {
+  -ms-grid-columns: (1fr)[8];
+  grid-template-columns: repeat(8, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-8 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-8 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-9 {
+  -ms-grid-columns: (1fr)[9];
+  grid-template-columns: repeat(9, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-9 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-9 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list li img {
   margin-bottom: 10px;
 }
-ul.wp-block-create-block-dynamic-list li h5 {
+.wp-block-create-block-dynamic-list li h5 {
   font-size: 20px;
   margin: 0 0 5px;
   line-height: 1.4;
 }
-ul.wp-block-create-block-dynamic-list li h5 a {
+.wp-block-create-block-dynamic-list li h5 a {
   color: #000;
 }
-ul.wp-block-create-block-dynamic-list li time {
+.wp-block-create-block-dynamic-list li time {
   font-size: 12px;
   color: #969696;
 }
-ul.wp-block-create-block-dynamic-list li p {
+.wp-block-create-block-dynamic-list li p {
   font-size: 14px;
   color: #303030;
   line-height: 1.6;

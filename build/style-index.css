@@ -7,9 +7,151 @@
   margin: 0;
   display: -ms-grid;
   display: grid;
+  gap: 30px;
+}
+.wp-block-create-block-dynamic-list.has-1 {
+  -ms-grid-columns: (1fr)[1];
+  grid-template-columns: repeat(1, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-1 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-1 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-2 {
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-2 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-2 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-3 {
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-3 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-3 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-4 {
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-4 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-4 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-5 {
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-5 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-5 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-6 {
+  -ms-grid-columns: (1fr)[6];
+  grid-template-columns: repeat(6, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-6 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-6 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-7 {
+  -ms-grid-columns: (1fr)[7];
+  grid-template-columns: repeat(7, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-7 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-7 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-8 {
+  -ms-grid-columns: (1fr)[8];
+  grid-template-columns: repeat(8, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-8 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-8 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-create-block-dynamic-list.has-9 {
+  -ms-grid-columns: (1fr)[9];
+  grid-template-columns: repeat(9, 1fr);
+}
+@media only screen and (max-width: 900px) {
+  .wp-block-create-block-dynamic-list.has-9 {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 300px) {
+  .wp-block-create-block-dynamic-list.has-9 {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .wp-block-create-block-dynamic-list li img {
   margin-bottom: 10px;

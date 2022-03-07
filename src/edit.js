@@ -9,8 +9,11 @@ import { useSelect } from "@wordpress/data";
 import "./editor.scss";
 
 export default function Edit({ attributes, setAttributes }) {
-  const { numberOfPosts, displayFeaturedImage,order, orderBy } = attributes;
+  const { numberOfPosts, displayFeaturedImage,order, orderBy, gridTemplateColumns } = attributes;
 
+  const TemplateColumns = {
+    gridTemplateColumns : `repeat(${gridTemplateColumns}, 1fr)`
+  }
   const posts = useSelect(
     select =>
       select("core").getEntityRecords("postType", "post", {
@@ -29,14 +32,7 @@ export default function Edit({ attributes, setAttributes }) {
   const onNumberOfItemsChange = (value)=>{
     setAttributes({numberOfPosts : value})
   }
-
-  // if (posts) {
-  //   console.log(
-  //     "posts: ", posts.length 
-  //   );
-  // }
-  console.log("posts: ", posts);
-
+  
   return (
     <>
     <InspectorControls>
@@ -57,9 +53,19 @@ export default function Edit({ attributes, setAttributes }) {
           order={order}
           onOrderChange={(value) => setAttributes({order : value})}
         />
+
+        <RangeControl 
+        label = 'control how many column' 
+        min={ 1 } 
+        max={ 5 } 
+        step={ 1 }
+        value={gridTemplateColumns}
+        onChange = {(val) => setAttributes({gridTemplateColumns : val})}
+         />
+
       </PanelBody>
     </InspectorControls>
-    <ul {...useBlockProps()}>
+    <ul {...useBlockProps({ className: ` has-${gridTemplateColumns}` })}>
       {posts &&
         posts.map(post =>
           <li key={post.id}>

@@ -1,18 +1,31 @@
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
+$gtc:(
+1, 2, 3, 4, 5, 6, 7, 8, 9
+);
 
-ul.wp-block-create-block-dynamic-list {
+.wp-block-create-block-dynamic-list {
 	
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		display: grid;	
 		gap: 30px;
-	
+
+		@each $num in $gtc {		
+			&.has-#{$num}{
+				grid-template-columns: repeat($num, 1fr);
+				
+				@media only screen and (max-width : 900px) {
+					
+					grid-template-columns: repeat(2, 1fr);
+				}
+				@media only screen and (max-width : 300px) {			
+					grid-template-columns: repeat(1, 1fr);
+					
+				}
+				
+			}
+		}
+		
 		li {
 	
 			img {
@@ -40,6 +53,5 @@ ul.wp-block-create-block-dynamic-list {
 				line-height: 1.6;
 				margin: 15px 0 0;
 			}
-		}
-	
+		}	
 }

@@ -42,8 +42,12 @@ function Edit(_ref) {
     numberOfPosts,
     displayFeaturedImage,
     order,
-    orderBy
+    orderBy,
+    gridTemplateColumns
   } = attributes;
+  const TemplateColumns = {
+    gridTemplateColumns: `repeat(${gridTemplateColumns}, 1fr)`
+  };
   const posts = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_5__.useSelect)(select => select("core").getEntityRecords("postType", "post", {
     per_page: numberOfPosts,
     _embed: true,
@@ -61,14 +65,8 @@ function Edit(_ref) {
     setAttributes({
       numberOfPosts: value
     });
-  }; // if (posts) {
-  //   console.log(
-  //     "posts: ", posts.length 
-  //   );
-  // }
+  };
 
-
-  console.log("posts: ", posts);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Display Featured Image', 'dynamic-list'),
     checked: displayFeaturedImage,
@@ -86,7 +84,18 @@ function Edit(_ref) {
     onOrderChange: value => setAttributes({
       order: value
     })
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)(), posts && posts.map(post => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RangeControl, {
+    label: "control how many column",
+    min: 1,
+    max: 5,
+    step: 1,
+    value: gridTemplateColumns,
+    onChange: val => setAttributes({
+      gridTemplateColumns: val
+    })
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)({
+    className: ` has-${gridTemplateColumns}`
+  }), posts && posts.map(post => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     key: post.id
   }, displayFeaturedImage && post._embedded && post._embedded["wp:featuredmedia"] && post._embedded["wp:featuredmedia"].length > 0 && post._embedded["wp:featuredmedia"][0] && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url,
