@@ -25,7 +25,8 @@ function posts_block($attributes)
 	);
 
 	$recent_posts = get_posts($args);
-	$posts = '<ul class = " wp-block-create-block-dynamic-list has-' . $attributes['gridTemplateColumns'] . '">';
+	// $posts = '<ul class = " wp-block-create-block-dynamic-list has-' . $attributes['gridTemplateColumns'] . '">';
+	$posts = '<ul ' . get_block_wrapper_attributes(['class' => 'has-' . $attributes['gridTemplateColumns']]) . '>';
 
 	foreach ($recent_posts  as $post) {
 		$title = get_the_title($post);
