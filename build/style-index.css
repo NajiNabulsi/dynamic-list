@@ -3,7 +3,7 @@
   \***************************************************************************************************************************************************************************************************************************************/
 .wp-block-create-block-dynamic-list {
   list-style: none;
-  padding: 0;
+  padding: 20px;
   margin: 0;
   display: -ms-grid;
   display: grid;
@@ -19,7 +19,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
   .wp-block-create-block-dynamic-list.has-1 {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
@@ -35,7 +35,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
   .wp-block-create-block-dynamic-list.has-2 {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
@@ -51,7 +51,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
   .wp-block-create-block-dynamic-list.has-3 {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
@@ -67,7 +67,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
   .wp-block-create-block-dynamic-list.has-4 {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
@@ -83,7 +83,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
   .wp-block-create-block-dynamic-list.has-5 {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
@@ -99,7 +99,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
   .wp-block-create-block-dynamic-list.has-6 {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
@@ -115,7 +115,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
   .wp-block-create-block-dynamic-list.has-7 {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
@@ -131,7 +131,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
   .wp-block-create-block-dynamic-list.has-8 {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
@@ -147,7 +147,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
   .wp-block-create-block-dynamic-list.has-9 {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
@@ -162,16 +162,11 @@
   margin: 0 0 5px;
   line-height: 1.4;
 }
-.wp-block-create-block-dynamic-list li h5 a {
-  color: #000;
-}
 .wp-block-create-block-dynamic-list li time {
   font-size: 12px;
-  color: #969696;
 }
 .wp-block-create-block-dynamic-list li p {
   font-size: 14px;
-  color: #303030;
   line-height: 1.6;
   margin: 15px 0 0;
 }

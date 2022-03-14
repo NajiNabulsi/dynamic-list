@@ -11,9 +11,10 @@ import "./editor.scss";
 export default function Edit({ attributes, setAttributes }) {
   const { numberOfPosts, displayFeaturedImage,order, orderBy, gridTemplateColumns } = attributes;
 
-  const TemplateColumns = {
-    gridTemplateColumns : `repeat(${gridTemplateColumns}, 1fr)`
-  }
+  // const TemplateColumns = {
+  //   gridTemplateColumns : `repeat(${gridTemplateColumns}, 1fr)`
+  // }
+
   const posts = useSelect(
     select =>
       select("core").getEntityRecords("postType", "post", {

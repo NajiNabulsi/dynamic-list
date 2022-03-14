@@ -44,10 +44,10 @@ function Edit(_ref) {
     order,
     orderBy,
     gridTemplateColumns
-  } = attributes;
-  const TemplateColumns = {
-    gridTemplateColumns: `repeat(${gridTemplateColumns}, 1fr)`
-  };
+  } = attributes; // const TemplateColumns = {
+  //   gridTemplateColumns : `repeat(${gridTemplateColumns}, 1fr)`
+  // }
+
   const posts = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_5__.useSelect)(select => select("core").getEntityRecords("postType", "post", {
     per_page: numberOfPosts,
     _embed: true,

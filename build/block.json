@@ -1,5 +1,5 @@
 {
-	
+	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "create-block/dynamic-list",
 	"version": "0.1.0",
@@ -9,7 +9,13 @@
 	"description": "envo dynamic list by Rahaf.",
 	"keywords": ["d","posts"],
 	"supports": {
-		"html": false
+		"html": false,
+		"align": true,
+		"color": {			
+			"text": true,
+            "background": true,
+            "link": true
+		}
 	},
 	"textdomain": 	"dynamic-list",
 	"editorScript": "file:./index.js",
